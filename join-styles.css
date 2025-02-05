@@ -1,0 +1,258 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4500;
+    text-decoration: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Join Section */
+.join-section {
+    padding: 80px 0;
+    min-height: calc(100vh - 180px);
+}
+
+.join-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Join Info Styles */
+.join-info {
+    padding: 60px;
+    background: linear-gradient(135deg, #ff4500, #ff5722);
+    color: white;
+}
+
+.join-info h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.join-info p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.benefits {
+    margin-bottom: 40px;
+}
+
+.benefits h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.benefits ul {
+    list-style: none;
+}
+
+.benefits li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.benefits li:before {
+    content: "✓";
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.testimonial {
+    padding: 30px 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.testimonial blockquote {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Join Form Styles */
+.join-form {
+    padding: 60px;
+    background: white;
+}
+
+.join-form h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #ff4500;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox label {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-button:hover {
+    background: #ff5722;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #ff4500;
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    background: white;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .join-container {
+        grid-template-columns: 1fr;
+    }
+
+    .join-info,
+    .join-form {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .join-info,
+    .join-form {
+        padding: 30px;
+    }
+
+    .join-section {
+        padding: 40px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
